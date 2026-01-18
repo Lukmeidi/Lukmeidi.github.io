@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kedai Kopi Nusantara - Secangkir Kopi Nikmat, Rasa Autentik, Peluang Besar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
+        
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+        }
+        
+        .hero-gradient {
+            background: linear-gradient(135deg, #8B4513 0%, #D2691E 50%, #CD853F 100%);
+        }
+        
+        .coffee-pattern {
+            background-image: 
+                radial-gradient(circle at 20% 50%, rgba(139, 69, 19, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(210, 105, 30, 0.1) 0%, transparent 50%);
+        }
+        
+        .float-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-20px); }
+        }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: #25D366;
+            color: white;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            box-shadow: 0 4px 12px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+        }
+        
+        .card-hover {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+    </style>
+</head>
+<body class="bg-amber-50">
+    
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full top-0 z-50">
+        <div class="container mx-auto px-4 py-4">
+            <div class="flex justify-between items-center">
+                <div class="flex items-center space-x-2">
+                    <span class="text-4xl">☕</span>
+                    <span class="text-2xl font-bold text-amber-900">Kedai Kopi Nusantara</span>
+                </div>
+                <div class="hidden md:flex space-x-6">
+                    <a href="#home" class="text-amber-900 hover:text-orange-600 transition">Beranda</a>
+                    <a href="#problem" class="text-amber-900 hover:text-orange-600 transition">Masalah</a>
+                    <a href="#solution" class="text-amber-900 hover:text-orange-600 transition">Solusi</a>
+                    <a href="#products" class="text-amber-900 hover:text-orange-600 transition">Produk</a>
+                    <a href="#team" class="text-amber-900 hover:text-orange-600 transition">Tim</a>
+                    <a href="#investment" class="text-amber-900 hover:text-orange-600 transition">Investasi</a>
+                    <a href="#contact" class="text-amber-900 hover:text-orange-600 transition">Kontak</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-gradient coffee-pattern min-h-screen flex items-center pt-20">
+        <div class="container mx-auto px-4 py-20">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="text-white fade-in">
+                    <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+                        Secangkir Kopi Nikmat, Rasa Autentik
+                    </h1>
+                    <p class="text-2xl md:text-3xl mb-8 text-amber-100 font-semibold">
+                        Peluang Besar ☕
+                    </p>
+                    <p class="text-lg md:text-xl mb-10 text-amber-50 leading-relaxed">
+                        Nikmati kopi berkualitas tinggi langsung dari sumbernya. Dari petani Indonesia untuk pecinta kopi sejati.
+                    </p>
+                    <div class="flex flex-wrap gap-4">
+                        <a href="#products" class="bg-white text-amber-900 px-8 py-4 rounded-full font-bold text-lg hover:bg-amber-100 transition shadow-lg">
+                            Lihat Produk
+                        </a>
+                        <a href="#investment" class="border-2 border-white text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white hover:text-amber-900 transition">
+                            Info Investasi
+                        </a>
+                    </div>
+                </div>
+                <div class="float-animation text-center">
+                    <div class="text-9xl md:text-[200px] filter drop-shadow-2xl">☕</div>
+                    <div class="flex justify-center gap-4 mt-8 text-6xl">
+                        <span>🌾</span>
+                        <span>🏔️</span>
+                        <span>🇮🇩</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Statement -->
+    <section id="problem" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl md:text-5xl font-bold text-amber-900 mb-4">Masalah Yang Kami Hadapi</h2>
+                <div class="w-24 h-1 bg-orange-500 mx-auto mb-8"></div>
+                <p class="text-xl text-gray-700 max-w-3xl mx-auto">
+                    Pasar kopi Indonesia menghadapi tantangan besar dalam distribusi kualitas
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="bg-red-50 p-8 rounded-2xl card-hover fade-in border-2 border-red-100">
+                    <div class="text-6xl mb-4">😔</div>
+                    <h3 class="text-2xl font-bold text-red-800 mb-4">Akses Terbatas</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Sulit menemukan biji kopi berkualitas tinggi langsung dari petani lokal. Distribusi yang rumit membuat harga melonjak.
+                    </p>
+                </div>
+                
+                <div class="bg-orange-50 p-8 rounded-2xl card-hover fade-in border-2 border-orange-100">
+                    <div class="text-6xl mb-4">❌</div>
+                    <h3 class="text-2xl font-bold text-orange-800 mb-4">Kualitas Tidak Konsisten</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Banyak kopi di pasaran tidak menjamin keaslian dan kesegaran. Proses roasting yang tidak optimal mengurangi cita rasa.
+                    </p>
+                </div>
+                
+                <div class="bg-amber-50 p-8 rounded-2xl card-hover fade-in border-2 border-amber-100">
+                    <div class="text-6xl mb-4">💸</div>
+                    <h3 class="text-2xl font-bold text-amber-800 mb-4">Harga Tidak Wajar</h3>
+                    <p class="text-gray-700 leading-relaxed">
+                        Rantai distribusi panjang membuat harga kopi premium menjadi mahal untuk konsumen akhir.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution -->
+    <section id="solution" class="py-20 bg-gradient-to-br from-amber-100 to-orange-100">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl md:text-5xl font-bold text-amber-900 mb-4">Solusi Kami</h2>
+                <div class="w-24 h-1 bg-orange-500 mx-auto mb-8"></div>
+                <p class="text-xl text-gray-800 max-w-3xl mx-auto">
+                    Kedai Kopi Nusantara menghadirkan solusi lengkap untuk pecinta kopi sejati
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-12 max-w-6xl mx-auto items-center">
+                <div class="fade-in">
+                    <div class="bg-white p-10 rounded-3xl shadow-xl">
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="text-4xl">✨</div>
+                                <div>
+                                    <h3 class="text-2xl font-bold text-amber-900 mb-2">Langsung dari Sumber</h3>
+                                    <p class="text-gray-700">Kami bermitra langsung dengan petani kopi terbaik di berbagai wilayah Indonesia untuk menjamin kualitas dan kesegaran.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4">
+                                <div class="text-4xl">🔥</div>
+                                <div>
+                                    <h3 class="text-2xl font-bold text-amber-900 mb-2">Roasted Berkualitas</h3>
+                                    <p class="text-gray-700">Proses roasting profesional dengan standar internasional menghasilkan profil rasa yang sempurna untuk setiap varian kopi.</p>
+                                </div>
+                            </div>
+                            
+                            <div class="flex items-start space-x-4">
+                                <div class="text-4xl">🌈</div>
+                                <div>
+                                    <h3 class="text-2xl font-bold text-amber-900 mb-2">Beragam Pilihan</h3>
+                                    <p class="text-gray-700">Dari Arabika Gayo hingga Robusta Lampung, kami menyediakan berbagai varian kopi nusantara untuk setiap selera.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="text-center fade-in">
+                    <div class="text-8xl mb-6">☕</div>
+                    <h3 class="text-3xl font-bold text-amber-900 mb-4">Kopi Premium, Harga Terjangkau</h3>
+                    <p class="text-xl text-gray-800 leading-relaxed">
+                        Dengan memotong rantai distribusi, kami memberikan kopi berkualitas tinggi dengan harga yang lebih bersahabat untuk semua kalangan.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products -->
+    <section id="products" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl md:text-5xl font-bold text-amber-900 mb-4">Produk Unggulan</h2>
+                <div class="w-24 h-1 bg-orange-500 mx-auto mb-8"></div>
+                <p class="text-xl text-gray-700 max-w-3xl mx-auto">
+                    Nikmati cita rasa kopi nusantara dari berbagai daerah di Indonesia
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-10 max-w-5xl mx-auto">
+                <div class="bg-gradient-to-br from-amber-50 to-orange-50 rounded-3xl overflow-hidden shadow-xl card-hover fade-in border-2 border-amber-200">
+                    <div class="p-8">
+                        <div class="text-7xl text-center mb-6">☕</div>
+                        <h3 class="text-3xl font-bold text-amber-900 mb-4 text-center">Kopi Arabika Premium</h3>
+                        <div class="space-y-3 mb-6">
+                            <div class="flex items-center space-x-2">
+                                <span class="text-2xl">🏔️</span>
+                                <span class="text-gray-800"><strong>Asal:</strong> Gayo (Aceh), Toraja (Sulawesi), Kintamani (Bali)</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <span class="text-2xl">🌸</span>
+                                <span class="text-gray-800"><strong>Profil Rasa:</strong> Floral, fruity, dengan acidity seimbang</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <span class="text-2xl">✨</span>
+                                <span class="text-gray-800"><strong>Keunggulan:</strong> Aroma kompleks, body medium, aftertaste manis</span>
+                            </div>
+                        </div>
+                        <div class="bg-white p-4 rounded-xl mb-6">
+                            <p class="text-gray-700 leading-relaxed">
+                                Ditanam di ketinggian 1200-1800 mdpl, Arabika kami memiliki karakteristik unik dari setiap daerah. Cocok untuk para penikmat kopi yang menghargai kompleksitas rasa.
+                            </p>
+                        </div>
+                        <div class="text-center">
+                            <span class="text-3xl font-bold text-orange-600">Rp 85.000</span>
+                            <span class="text-gray-600">/250gr</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gradient-to-br from-orange-50 to-red-50 rounded-3xl overflow-hidden shadow-xl card-hover fade-in border-2 border-orange-200">
+                    <div class="p-8">
+                        <div class="text-7xl text-center mb-6">☕</div>
+                        <h3 class="text-3xl font-bold text-amber-900 mb-4 text-center">Kopi Robusta Kuat</h3>
+                        <div class="space-y-3 mb-6">
+                            <div class="flex items-center space-x-2">
+                                <span class="text-2xl">🌋</span>
+                                <span class="text-gray-800"><strong>Asal:</strong> Lampung, Bengkulu, Jawa Timur</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <span class="text-2xl">💪</span>
+                                <span class="text-gray-800"><strong>Profil Rasa:</strong> Bold, earthy, dengan kafein tinggi</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <span class="text-2xl">🔥</span>
+                                <span class="text-gray-800"><strong>Keunggulan:</strong> Body tebal, bitter seimbang, energi maksimal</span>
+                            </div>
+                        </div>
+                        <div class="bg-white p-4 rounded-xl mb-6">
+                            <p class="text-gray-700 leading-relaxed">
+                                Robusta pilihan dari dataran rendah Indonesia, ideal untuk espresso atau kopi susu. Memberikan kick kafein yang kuat untuk memulai hari Anda.
+                            </p>
+                        </div>
+                        <div class="text-center">
+                            <span class="text-3xl font-bold text-orange-600">Rp 65.000</span>
+                            <span class="text-gray-600">/250gr</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12 fade-in">
+                <a href="#contact" class="bg-gradient-to-r from-orange-500 to-red-500 text-white px-10 py-4 rounded-full font-bold text-lg hover:from-orange-600 hover:to-red-600 transition shadow-lg inline-block">
+                    Pesan Sekarang 🛒
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team -->
+    <section id="team" class="py-20 bg-gradient-to-br from-amber-50 to-orange-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl md:text-5xl font-bold text-amber-900 mb-4">Tim Kami</h2>
+                <div class="w-24 h-1 bg-orange-500 mx-auto mb-8"></div>
+                <p class="text-xl text-gray-700 max-w-3xl mx-auto">
+                    Dipimpin oleh para ahli yang passionate terhadap kopi Indonesia
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                <div class="bg-white rounded-2xl overflow-hidden shadow-xl card-hover fade-in">
+                    <div class="bg-gradient-to-br from-amber-600 to-orange-600 p-8 text-center">
+                        <div class="w-32 h-32 bg-white rounded-full mx-auto flex items-center justify-center text-6xl mb-4">👨‍💼</div>
+                        <h3 class="text-2xl font-bold text-white">Meidi</h3>
+                        <p class="text-amber-100 font-semibold">Founder & CEO</p>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-700 leading-relaxed mb-4">
+                            Pengusaha dengan passion di industri F&B selama 8 tahun. Memiliki visi mengangkat kopi lokal Indonesia ke pasar global.
+                        </p>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex items-center space-x-2">
+                                <span>🎓</span>
+                                <span>S2 Manajemen Bisnis</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <span>💼</span>
+                                <span>8+ tahun di industri F&B</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-2xl overflow-hidden shadow-xl card-hover fade-in">
+                    <div class="bg-gradient-to-br from-orange-600 to-red-600 p-8 text-center">
+                        <div class="w-32 h-32 bg-white rounded-full mx-auto flex items-center justify-center text-6xl mb-4">👩‍🔬</div>
+                        <h3 class="text-2xl font-bold text-white">Sari Dewi</h3>
+                        <p class="text-orange-100 font-semibold">Head of Quality Control</p>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-700 leading-relaxed mb-4">
+                            Ahli Q Grader bersertifikat internasional dengan spesialisasi kopi specialty. Menjamin setiap batch kopi memenuhi standar premium.
+                        </p>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex items-center space-x-2">
+                                <span>🎓</span>
+                                <span>Certified Q Grader</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <span>☕</span>
+                                <span>10+ tahun di industri kopi</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-white rounded-2xl overflow-hidden shadow-xl card-hover fade-in">
+                    <div class="bg-gradient-to-br from-red-600 to-amber-600 p-8 text-center">
+                        <div class="w-32 h-32 bg-white rounded-full mx-auto flex items-center justify-center text-6xl mb-4">👨‍🌾</div>
+                        <h3 class="text-2xl font-bold text-white">Budi Santoso</h3>
+                        <p class="text-red-100 font-semibold">Head of Sourcing</p>
+                    </div>
+                    <div class="p-6">
+                        <p class="text-gray-700 leading-relaxed mb-4">
+                            Memiliki jaringan luas dengan petani kopi di seluruh Indonesia. Memastikan rantai pasokan yang etis dan berkelanjutan.
+                        </p>
+                        <div class="space-y-2 text-sm">
+                            <div class="flex items-center space-x-2">
+                                <span>🎓</span>
+                                <span>Agrikultur & Sustainability</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <span>🌱</span>
+                                <span>15+ tahun di supply chain</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Investment Opportunity -->
+    <section id="investment" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-16 fade-in">
+                <h2 class="text-4xl md:text-5xl font-bold text-amber-900 mb-4">Peluang Investasi</h2>
+                <div class="w-24 h-1 bg-orange-500 mx-auto mb-8"></div>
+                <p class="text-xl text-gray-700 max-w-3xl mx-auto">
+                    Bergabunglah dalam pertumbuhan industri kopi Indonesia yang terus berkembang
+                </p>
+            </div>
+            
+            <div class="max-w-6xl mx-auto">
+                <div class="grid md:grid-cols-2 gap-10 mb-12">
+                    <div class="bg-gradient-to-br from-green-50 to-emerald-50 p-8 rounded-3xl shadow-xl fade-in border-2 border-green-200">
+                        <div class="text-6xl mb-4 text-center">📈</div>
+                        <h3 class="text-3xl font-bold text-green-800 mb-6 text-center">Proyeksi Keuangan</h3>
+                        <div class="space-y-4">
+                            <div class="bg-white p-4 rounded-xl">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="font-semibold text-gray-800">Tahun 1</span>
+                                    <span class="text-2xl font-bold text-green-600">Rp 500 Juta</span>
+                                </div>
+                                <p class="text-sm text-gray-600">Target penjualan dengan margin 35%</p>
+                            </div>
+                            <div class="bg-white p-4 rounded-xl">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="font-semibold text-gray-800">Tahun 2</span>
+                                    <span class="text-2xl font-bold text-green-600">Rp 1,2 Miliar</span>
+                                </div>
+                                <p class="text-sm text-gray-600">Ekspansi ke 5 kota besar, margin 40%</p>
+                            </div>
+                            <div class="bg-white p-4 rounded-xl">
+                                <div class="flex justify-between items-center mb-2">
+                                    <span class="font-semibold text-gray-800">Tahun 3</span>
+                                    <span class="text-2xl font-bold text-green-600">Rp 2,5 Miliar</span>
+                                </div>
+                                <p class="text-sm text-gray-600">Jaringan nasional + ekspor, margin 45%</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-gradient-to-br from-amber-50 to-orange-50 p-8 rounded-3xl shadow-xl fade-in border-2 border-amber-200">
+                        <div class="text-6xl mb-4 text-center">💰</div>
+                        <h3 class="text-3xl font-bold text-amber-800 mb-6 text-center">Kenapa Investasi?</h3>
+                        <div class="space-y-4">
+                            <div class="flex items-start space-x-3">
+                                <span class="text-2xl">🚀</span>
+                                <div>
+                                    <h4 class="font-bold text-gray-800 mb-1">Pasar yang Berkembang</h4>
+                                    <p class="text-gray-700 text-sm">Konsumsi kopi Indonesia tumbuh 8% per tahun</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <span class="text-2xl">🎯</span>
+                                <div>
+                                    <h4 class="font-bold text-gray-800 mb-1">Model Bisnis Proven</h4>
+                                    <p class="text-gray-700 text-sm">Direct sourcing = margin lebih tinggi</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <span class="text-2xl">🌍</span>
+                                <div>
+                                    <h4 class="font-bold text-gray-800 mb-1">Potensi Ekspor</h4>
+                                    <p class="text-gray-700 text-sm">Kopi Indonesia diminati pasar global</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3">
+                                <span class="text-2xl">👥</span>
+                                <div>
+                                    <h4 class="font-bold text-gray-800 mb-1">Tim Berpengalaman</h4>
+                                    <p class="text-gray-700 text-sm">30+ tahun pengalaman gabungan</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="bg-gradient-to-r from-orange-500 to-red-500 p-10 rounded-3xl shadow-2xl text-white text-center fade-in">
+                    <div class="text-7xl mb-6">🤝</div>
+                    <h3 class="text-4xl font-bold mb-4">Mari Berkembang Bersama</h3>
+                    <p class="text-xl mb-8 max-w-2xl mx-auto">
+                        Kami mencari investor strategis untuk mempercepat ekspansi dan membawa kopi nusantara ke level internasional
+                    </p>
+                    <div class="flex flex-wrap justify-center gap-4">
+                        <span class="bg-white text-orange-600 px-6 py-3 rounded-full font-bold">Min. Investasi: Rp 100 Juta</span>
+                        <span class="bg-white text-red-600 px-6 py-3 rounded-full font-bold">
